@@ -10,7 +10,7 @@ public class Conexion {
     private Coordinador coordinador;
     private final String nombreBd = "EjemploJava";
     private final String usuario = "root";
-    private final String password = "ElDavyz2006zz";
+    private final String password = "";
     private final String url = "jdbc:mysql://localhost:3306/" + nombreBd;
     private Connection conn = null;
 
@@ -22,6 +22,8 @@ public class Conexion {
 
             if (conn == null) {
                 System.err.println("Conexión fallida a la BD " + nombreBd);
+            }else if{
+                System.out.println("Conexión exitosa a " + nombreBd);
             }
         } catch (ClassNotFoundException e) {
             System.err.println("Clase no encontrada: " + e.getMessage());
